@@ -1,15 +1,15 @@
 {
-  "name": "eklabs.angularStarterPack",
-  "version": "0.2.3",
-  "description": "AngularJS Starter Pack",
+  "name": "ttc-tcharrequester",
+  "version": "1.0.0",
+  "description": "Service for requesting images or url from a database. Could be use in a tchat",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kiwouz/eklabs.angularStarterPack"
+    "url": "https://github.com/madstain/ttc-tcharrequester"
   },
   "authors": [
-    "Laurent Breda"
+    "Antoine et Aurélien"
   ],
-  "main": "release/eklabs.angualarStarterPack.js",
+  "main": "src/ttcTchatRequesterService.js",
   "devDependencies": {
     "chalk": "^0.5.1",
     "faithful-exec": "^0.1.0",
