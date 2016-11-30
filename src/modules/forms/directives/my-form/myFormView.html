@@ -1,0 +1,22 @@
+<form name="myForm" ng-submit="actions.onValid(myUser)">
+
+    <div layout="column" >
+        <md-input-container >
+            <label>FirstName</label>
+            <input name="name" ng-model="myUser.firstname" />
+        </md-input-container>
+
+        <md-input-container >
+            <label>LastName</label>
+            <input name="name" ng-model="myUser.lastname" />
+        </md-input-container>
+    </div>
+
+
+    <md-button type="submit">
+        <md-icon md-svg-src="material-design:done"></md-icon>
+        Valider
+    </md-button>
+
+
+</form>
