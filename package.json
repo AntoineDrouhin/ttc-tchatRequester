@@ -1,5 +1,5 @@
 {
-  "name": "ttc-tchatrequester",
+  "name": "ttcTchatRequester",
   "version": "1.0.0",
   "description": "Service for requesting images or url from a database. Could be use in a tchat",
   "repository": {

@@ -116,14 +116,14 @@ module.exports = function (grunt) {
         ngtemplates: {
             app : {
                 src: ['src/*.html'],
-                dest: '<%= builddir %>/ttc-tchatRequester_view.js',
+                dest: '<%= builddir %>/ttcTchatRequester_view.js',
                 concat: 'dist',
                 options: {
                     url: function (url) {
                         url = url.substr(0, 4) === 'src/' ? url.substr(4) : url;
-                        return 'ttc-tchatRequester/'+url;
+                        return 'ttcTchatRequester/'+url;
                     },
-                    module: 'ttc-tchatRequester'
+                    module: 'ttcTchatRequester'
                 }
             }
         },
