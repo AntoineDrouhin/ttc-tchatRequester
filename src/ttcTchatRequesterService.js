@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('eklabs.angularStarterPack.ttcTchatRequester', [])
+angular.module('ttcTchatRequesterModule', [])
     .factory('ttcTchatRequester', ['$http', function ($http) {
 
     var cmds = [];
