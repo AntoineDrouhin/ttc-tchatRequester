@@ -20,7 +20,7 @@ module.exports = function (grunt) {
 
         // --- Variable Configuration
         appdir      : 'src',
-        builddir    : 'demo/build',
+        builddir    : 'dist',
 
         pkg         : grunt.file.readJSON('package.json'),
         buildtag    : '-dev-' + grunt.template.today('yyyy-mm-dd'),
@@ -44,14 +44,6 @@ module.exports = function (grunt) {
             build: {
                 src: files.src, // -> need to order concat
                 dest: '<%= builddir %>/<%= pkg.name %>.js'
-            },
-            css : {
-                src : ['.tmp/styles/{**/,}*.css','.tmp/public/{**/,}*.css'], // -> need to order concat
-                dest : '<%= builddir %>/<%= pkg.name %>.css',
-                options : {
-                    banner : '',
-                    footer : ''
-                }
             }
         },
 
@@ -87,14 +79,10 @@ module.exports = function (grunt) {
         watch: {
             build : {
                 files: [
-                    'src/{,**/}*.js','src/{**/,}*.html',
-                    'src/modules/*/{,**/}*.js', 'src/modules/*/{,**/}*.html'],
+                    'src/*.js',
+                    'src/*.html'
+                ],
                 tasks: ['build'] //['build', 'karma:background:run']
-            },
-
-            compass: {
-                files: ['src/{,*/}*.{scss,sass}'],
-                tasks: ['compass:server']
             }
         },
 
@@ -127,15 +115,15 @@ module.exports = function (grunt) {
         // --- Build a JS to stock all project different views
         ngtemplates: {
             app : {
-                src: ['src/views/{**/,}*.html','src/public/{**/,}*.svg','src/modules/{**/,}*.html'],
-                dest: '<%= builddir %>/eklabs.angularStarterPack_view.js',
+                src: ['src/*.html'],
+                dest: '<%= builddir %>/ttc-tchatRequester_view.js',
                 concat: 'dist',
                 options: {
                     url: function (url) {
                         url = url.substr(0, 4) === 'src/' ? url.substr(4) : url;
-                        return 'eklabs.angularStarterPack/'+url;
+                        return 'ttc-tchatRequester/'+url;
                     },
-                    module: 'eklabs.angularStarterPack'
+                    module: 'ttc-tchatRequester'
                 }
             }
         },
@@ -162,11 +150,6 @@ module.exports = function (grunt) {
                 files: [
 
                 ]
-            },
-            styles : {
-                expand: true,
-                src: 'src/{**/,}*.css',
-                dest: '.tmp/styles'
             },
             font : {
                 flatten : true,
@@ -212,10 +195,10 @@ module.exports = function (grunt) {
     // ------------- BUILD TASK
     grunt.registerTask('default', ['build', 'jshint']);
     grunt.registerTask('build', 'Perform a normal build', [ 'concat',               // -- Build one js file
-                                                            'ngtemplates',          // -- HTML to JS
-                                                            'uglify',               // -- Minimize the JS
-                                                            'css_light',                  // -- Perform css treatments
-                                                            'copy:images'          // -- Perform image treatment
+        'ngtemplates',          // -- HTML to JS
+        'uglify',               // -- Minimize the JS
+        'css_light',                  // -- Perform css treatments
+        'copy:images'          // -- Perform image treatment
     ]);
 
     grunt.registerTask('buildComplete', 'Perform a normal build', [ 'concat',               // -- Build one js file
