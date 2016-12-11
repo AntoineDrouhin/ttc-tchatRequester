@@ -12,8 +12,7 @@
     "angular-material": "1.1.1",
     "angular-resource": "~1.5.8",
     "angular-sanitize": "~1.5.8",
-    "angular-ui-ace": "bower",
-    "ttc-jsonAdmin": "git://github.com/MadStain/ttc-tchatRequester.git#0.1.0"
+    "ttc-tchatRequester": "git://github.com/MadStain/ttc-tchatRequester.git#0.1.0"
 
 
   },

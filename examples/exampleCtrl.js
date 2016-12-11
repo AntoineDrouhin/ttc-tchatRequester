@@ -1,7 +1,7 @@
 
 var example = angular.module('example', ['ttcTchatRequesterModule']);
 
-example.controller('ExampleCtrl', ['ttcTchatRequesterModule.ttcTchatRequester', function ExampleCtrl($scope, ttcTchatRequester) {
+example.controller('ExampleCtrl', ['$scope','ttcTchatRequester', function ExampleCtrl($scope, ttcTchatRequester) {
 
     // init the service
     ttcTchatRequester.init({
@@ -19,4 +19,5 @@ example.controller('ExampleCtrl', ['ttcTchatRequesterModule.ttcTchatRequester', 
         this.inputValue = ttcTchatRequester.exec(input);
 
     }
+
 }]);

@@ -3,44 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
 </head>
 <body ng-app="example" ng-controller="ExampleCtrl">
 
 <div layout="column" flex>
 
-    <h2 class="title" layout="row" layout-align="start start">
-        Directive Render
-    </h2>
+    <md-toolbar>
+        <div class="md-toolbar-tools" style="background:white;">
+            <md-autocomplete md-search-text="inputValue" md-items="item in onInputChange(inputValue)" md-item-text="item">
+                <span md-highlight-text="inputValue">{{item}}</span>
+            </md-autocomplete>
+            <md-button class="md-raised md-primary" ng-click="submit(inputValue)">
+                Envoyer
+            </md-button>
+        </div>
+    </md-toolbar>
 
-    <md-card style="padding:10px;overflow: auto" ng-style="{'max-height':maxHeight,'min-height':maxHeight}" layout="column" layout-align="start start" class="page_settings">
-        <md-toolbar>
-            <div class="md-toolbar-tools" style="background:white;">
-                <md-autocomplete md-search-text="inputValue" md-items="item in onInputChange(inputValue)" md-item-text="item">
-                    <span md-highlight-text="inputValue">{{item}}</span>
-                </md-autocomplete>
-                <md-button class="md-raised md-primary" ng-click="submit(inputValue)">
-                    Envoyer
-                </md-button>
-            </div>
-        </md-toolbar>
-    </md-card>
 
 </div>
 
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/ace-builds/src-min-noconflict/ace.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-resource/angular-resource.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="bower_components/angular-animate/angular-animate.min.js"></script>
 <script src="bower_components/angular-aria/angular-aria.js"></script>
 <script src="bower_components/angular-material/angular-material.js"></script>
-<script src="bower_components/angular-ui-ace/ui-ace.min.js"></script>
+
+<script src="bower_components/ttc-tchatRequester/src/ttcTchatRequesterService.js"></script>
 
 
-<script src="bower_components/ttc-jsonRequester/src/jsonAdminDirective.js"></script>
+
 <script src="./exampleCtrl.js"></script>
 
 </body>
