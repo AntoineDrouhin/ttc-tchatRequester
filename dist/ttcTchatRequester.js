@@ -1,6 +1,6 @@
 /**
  * Service for requesting images or url from a database. Could be use in a tchat
- * @version v1.0.0-dev-2016-12-11
+ * @version v1.0.0-dev-2016-12-12
  * @link 
  */
 

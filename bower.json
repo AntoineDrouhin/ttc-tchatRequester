@@ -1,6 +1,6 @@
 {
   "name": "ttcTchatRequester",
-  "version": "0.2.3",
+  "version": "1.0.0",
   "description": "Requesting action",
   "repository": {
     "type": "git",
@@ -12,7 +12,7 @@
     "angular-material": "1.1.1",
     "angular-resource": "~1.5.8",
     "angular-sanitize": "~1.5.8",
-    "ttc-tchatRequester": "git://github.com/MadStain/ttc-tchatRequester.git#0.1.4"
+    "ttc-tchatRequester": "git://github.com/MadStain/ttc-tchatRequester.git#1.0.0"
 
 
   },
