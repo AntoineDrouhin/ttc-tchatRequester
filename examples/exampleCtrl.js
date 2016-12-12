@@ -1,5 +1,5 @@
 
-var example = angular.module('example', ['ttcTchatRequesterModule']);
+var example = angular.module('example', ['ngMaterial','ttcTchatRequesterModule']);
 
 example.controller('ExampleCtrl', ['$scope','ttcTchatRequester', function ExampleCtrl($scope, ttcTchatRequester) {
 
